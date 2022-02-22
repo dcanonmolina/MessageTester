@@ -2,7 +2,7 @@
 This project connects to your Twilio Account and allows you to send and receive SMS or Whatsapp Messages
 
 ## Structure
-This project runs using Twilio Functions and React. Some of the functionalities are:
+This project runs using Twilio Functions and React. Also this would require you to install the Serverless plugin for Twilio-Cli https://www.twilio.com/docs/labs/serverless-toolkit 
 
 ## Functionalities
 - List account Phone numbers
@@ -25,6 +25,7 @@ The variables to set are:
 ## Test and Deploy
 To run on local, you will need to build the project 
 
+- `npm install`: To install the project references
 - `npm run build`: To compile the react files
 - `npm start`: To start the project on local
 
