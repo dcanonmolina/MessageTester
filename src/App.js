@@ -37,7 +37,7 @@ function App() {
     <div className="App">
       <div className="milinea">
         Password
-        <input id="txtPwd" type="text" onChange={handleTextChange} value={password}></input>
+        <input id="txtPwd" type="password" onChange={handleTextChange} value={password}></input>
         <button id="sendPwd" onClick={() => handleControlVisible()}>Validate</button>
       </div>
       {panelvisible ? <div><PanelMessaging data={phonelist} password={password}/><PanelHistory identity={identity}/></div>:null}
@@ -45,7 +45,6 @@ function App() {
     </div>
   );
 }
-
 
 
 export default App;

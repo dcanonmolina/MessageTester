@@ -5,32 +5,41 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prebuild": "rimraf dist",
-    "build": "parcel build src/index.html -d dist",
+    "build": "parcel build src/index.html --dist-dir dist",
+    "testParcel": "parcel build src/index.html",
     "postbuild": "ncp assets dist",
     "predeploy": "npm run build",
     "deploy": "twilio-run deploy",
-    "start:web": "parcel watch src/index.html -d dist",
+    "start:web": "parcel watch src/index.html --dist-dir dist",
     "start:twilio": "twilio-run",
     "prestart": "ncp assets dist",
     "start": "concurrently npm:start:web npm:start:twilio"
   },
   "dependencies": {
+    "@types/react": "^17.0.39",
+    "@types/react-dom": "^17.0.11",
     "twilio": "^3.56",
+    "twilio-sync": "^3.0.6",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@twilio-paste/core": "^11.0.1",
     "@twilio-paste/icons": "^6.1.0",
     "concurrently": "^7.0.0",
+    "events": "^3.3.0",
     "ncp": "^2.0.0",
-    "parcel-bundler": "^1.12.5",
+    "parcel": "^2.3.2",
+    "process": "^0.11.10",
     "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "twilio-run": "^3.1.0"
   },
-  "engines": {
-    "node": "12"
-  },
-  "homepage": "."
+  "homepage": ".",
+  "default": "dist/index.html",
+  "targets": {
+    "default": {
+      "publicUrl": "./"
+    }
+  }
 }
