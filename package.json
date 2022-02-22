@@ -4,13 +4,28 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "twilio-run",
-    "deploy": "twilio-run deploy"
+    "prebuild": "rimraf dist",
+    "build": "parcel build src/index.html -d dist",
+    "postbuild": "ncp assets dist",
+    "predeploy": "npm run build",
+    "deploy": "twilio-run deploy",
+    "start:web": "parcel watch src/index.html -d dist",
+    "start:twilio": "twilio-run",
+    "prestart": "ncp assets dist",
+    "start": "concurrently npm:start:web npm:start:twilio"
   },
   "dependencies": {
     "twilio": "^3.56"
   },
   "devDependencies": {
+    "@twilio-paste/core": "^11.0.1",
+    "@twilio-paste/icons": "^6.1.0",
+    "concurrently": "^7.0.0",
+    "ncp": "^2.0.0",
+    "parcel-bundler": "^1.12.5",
+    "prop-types": "^15.8.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "twilio-run": "^3.1.0"
   },
   "engines": {
