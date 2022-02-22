@@ -1,0 +1,39 @@
+.milinea {
+    display: inline-block;
+  }
+  
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: fit-content(40%);
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .txtMessage {
+    width: 90%;
+  }
+  
+  h3 {
+    text-align: center;
+  }
+  
+
+.fieldMessages{
+    width: 40%;
+}
+
+.fieldColumnWidth{
+    width: 20%;
+    display: inline-block;
+}
+
+.blockLine{
+  display: block;
+}
+
+.halfWidth{
+  width:50%
+}

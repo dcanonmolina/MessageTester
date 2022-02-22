@@ -15,7 +15,8 @@
     "start": "concurrently npm:start:web npm:start:twilio"
   },
   "dependencies": {
-    "twilio": "^3.56"
+    "twilio": "^3.56",
+    "web-vitals": "^2.1.4"
   },
   "devDependencies": {
     "@twilio-paste/core": "^11.0.1",
@@ -30,5 +31,6 @@
   },
   "engines": {
     "node": "12"
-  }
+  },
+  "homepage": "."
 }
