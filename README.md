@@ -10,6 +10,8 @@ This project runs using Twilio Functions and React. Also this would require you 
 - Receive messages, if the incoming webhook are set to the project 
 
 ## Configuration
+Create a Sync Service in your Twilio account.
+
 Please make a copy of .env.example and name it as .env
 The variables to set are:
 * ACCOUNT_SID
